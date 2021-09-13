@@ -124,4 +124,11 @@ fun accountInThreeYears(initial: Int, percent: Int): Double = TODO()
  * Пользователь задает целое трехзначное число (например, 478).
  * Необходимо вывести число, полученное из заданного перестановкой цифр в обратном порядке (например, 874).
  */
-fun numberRevert(number: Int): Int = TODO()
+fun numberRevert(number: Int): Int {
+    val num2 = number / 100
+    val num3 = (number / 10) % 10
+    val num4 = number % 10
+    val number2 = num4 * 100 + num3 * 10 + num2
+    return number2
+}
+
