@@ -115,9 +115,14 @@ fun maxDivisor(n: Int): Int {
             naok = a
             break
         }
+        if (a == 0) {
+            naok = 0
+            break
+        }
     }
     return naok
 }
+
 
 /**
  * Простая (2 балла)
