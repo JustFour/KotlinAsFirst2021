@@ -187,8 +187,20 @@ fun revert(n: Int): Int {
  *
  * Использовать операции со строками в этой задаче запрещается.
  */
-fun isPalindrome(n: Int): Boolean = TODO()
-
+fun isPalindrome(n: Int): Boolean {
+    var a: Int = 0
+    var b: Int = 0
+    var c: Int = n
+    var d: Boolean
+    while (c > 0) {
+        a = c % 10
+        b = b * 10 + a
+        c /= 10
+    }
+    if (n == b) d = true
+    else d = false
+    return d
+}
 /**
  * Средняя (3 балла)
  *
