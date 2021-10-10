@@ -108,13 +108,13 @@ fun minDivisor(n: Int): Int {
  */
 fun maxDivisor(n: Int): Int {
     var a = n - 1
-    var naok: Int = 1
-    while (a in n..1) {
+    var naok: Int = 0
+    while (a in 0..n) {
+        a--
         if (n % a == 0) {
             naok = a
             break
         }
-        a--
     }
     return naok
 }
