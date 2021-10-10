@@ -87,14 +87,37 @@ fun fib(n: Int): Int = TODO()
  *
  * Для заданного числа n > 1 найти минимальный делитель, превышающий 1
  */
-fun minDivisor(n: Int): Int = TODO()
+fun minDivisor(n: Int): Int {
+    var a = 2
+    var nok: Int = 2
+    while (a in 2..n) {
+
+        if (n % a == 0) {
+            nok = a
+            break
+        }
+        a++
+    }
+    return nok
+}
 
 /**
  * Простая (2 балла)
  *
  * Для заданного числа n > 1 найти максимальный делитель, меньший n
  */
-fun maxDivisor(n: Int): Int = TODO()
+fun maxDivisor(n: Int): Int {
+    var a = n - 1
+    var naok: Int = 1
+    while (a in n..1) {
+        if (n % a == 0) {
+            naok = a
+            break
+        }
+        a--
+    }
+    return naok
+}
 
 /**
  * Простая (2 балла)
@@ -138,7 +161,17 @@ fun isCoPrime(m: Int, n: Int): Boolean = TODO()
  *
  * Использовать операции со строками в этой задаче запрещается.
  */
-fun revert(n: Int): Int = TODO()
+fun revert(n: Int): Int {
+    var a: Int = 0
+    var b: Int = 0
+    var c: Int = n
+    while (c > 0) {
+        a = c % 10
+        b = b * 10 + a
+        c /= 10
+    }
+    return b
+}
 
 /**
  * Средняя (3 балла)
